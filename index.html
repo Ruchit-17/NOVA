@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fashion Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">  <link rel="stylesheet" type="text/css" href="styles.css">
+  
+  <script src="https://kit.fontawesome.com/117bd403df.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg " >
+      <a class="navbar-brand" href="#">NOVA</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <form class="form-inline ml-3 pr-4 ">
+          <div class="input-group searchBar">
+            <input type="text" class="form-control" placeholder="Search" aria-label="Search">
+            <div class="input-group-append">
+              <span class="input-group-text"><i class="fas fa-search search-icon pb-4"></i></span>
+            </div>
+          </div>
+        </form>
+        <ul class="navbar-nav navbarItems">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a id="signupButton" class="btn btn-outline-dark signUp" href="#"><i class="fa-solid fa-arrow-right-to-bracket"></i> Sign Up</a>
+            <div id="signupModal" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Sign Up</h2>
+                <form>
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name" placeholder="Your Name" required>
+                  
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" placeholder="Your Email" required>
+                  
+                  <label for="password">Password:</label>
+                  <input type="password" id="password" name="password" placeholder="Your Password" required>
+                  
+                  <input type="submit" value="Sign Up">
+                </form>
+              </div>
+            </div>
+          </li>
+        </ul>
+        
+        
+        
+      </div>
+    </nav>
+  </header>
+
+
+  <section id="hero">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-last">
+          <img src="dan-asaki-CqwVcsOZil4-unsplash-removebg-preview.png" class="hero-image " alt="Hero Photo">
+        </div>
+        <div class="col-lg-6">
+          <div class="hero-content rectangle-strip">
+            <h1 class="display-4">Welcome to NOVA</h1>
+            <p class="lead">Discover the latest fashion trends</p>
+            <button id="ctaButton" class="btn buy-button">Shop Now</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="newArrivals" class="container py-5">
+    <h2 class="text-center mb-4 display-5">NEW ARRIVALS</h2>
+    <div class="text-center">
+      <button class="btn newArrival-btn btn-outline-primary" data-filter="all">All</button>
+      <button class="btn newArrival-btn btn-outline-primary" data-filter="mens">Mens</button>
+      <button class="btn newArrival-btn btn-outline-primary" data-filter="kids">Kids</button>
+      <button class="btn newArrival-btn btn-outline-primary active-newarrival" data-filter="women">Women</button>
+    </div>
+    <section class="featured-products">
+      <div class="container">
+        <div class="row" id="productRow">
+          <!-- Product cards will be dynamically added here -->
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <section id="features">
+    <div class="row">
+      <div class="col-lg-4">
+      <i class="icon-feature fa-solid fa-circle-check fa-4x"></i>
+      <h3>Easy to use.</h3>
+    <p class="feature-desc">Buy your favourite dress in 2 steps.</p>
+    
+    </div>
+    <div class="col-lg-4">
+      <i class="icon-feature fa-solid fa-bullseye  fa-4x"></i>
+      <h3>Elite Clientele</h3>
+    <p class="feature-desc">We have all the greatest brands.</p>
+    </div>
+    <div class="col-lg-4">
+      <i class="icon-feature fa-solid fa-heart  fa-4x"></i>
+      <h3>Guaranteed to Satisfy.</h3>
+    <p class="feature-desc">Find the love of your attire or your money back.</p>
+    </div>
+    </div>
+        
+        
+      </section>
+
+
+      
+      <section id="Featured">
+        <h2 class="text-center display-5" style="padding-top: 3%;">FEATURED TODAY</h2>
+        
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="featured2.webp" class="card-img-top" alt="Product 4">
+                    <div class="card-body">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <h2 class="display-6" style="text-align: left;">The Weeknd</h2>
+                  <h2 class="" style="text-align: left;" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris diam turpis, ultrices in metus eget, imperdiet sodales orci. Mauris sed.</h2>                </div>
+              </div>
+            </div>
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="featured1.jpg" class="card-img-top" alt="Product 4">
+                    <div class="card-body">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <h2 class="display-6" style="text-align: left;">The Weeknd</h2>
+                  <h2 class="" style="text-align: left;" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris diam turpis, ultrices in metus eget, imperdiet sodales orci. Mauris sed.</h2>
+
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="featured3.webp" class="card-img-top" alt="Product 4">
+                    <div class="card-body">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <h2 class="display-6" style="text-align: left;">The Weeknd</h2>
+                  <h2 class="" style="text-align: left;" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris diam turpis, ultrices in metus eget, imperdiet sodales orci. Mauris sed.</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </a>
+        </div>
+        
+      </section>
+
+      <section id="testimonials" style="padding: 50px 40px; margin: 50px 40px; ">
+        <h2 class="display-5 text-center pb-4">TESTIMONIALS</h2>
+        <div id="testimonialSlider">
+          <div class="testimonial col-md-4">
+            <img src="test1.jpg" alt="Avatar 1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur libero nec lorem malesuada, sed accumsan enim efficitur.</p>
+            <h4>John Doe</h4>
+          </div>
+          <div class="testimonial col-md-4">
+            <img src="test1.jpg" alt="Avatar 2">
+            <p>Ut lobortis lacinia felis, eu facilisis massa fringilla in. Curabitur accumsan elit eget lorem convallis efficitur.</p>
+            <h4>Jane Smith</h4>
+          </div>
+          <div class="testimonial col-md-4">
+            <img src="test1.jpg" alt="Avatar 3">
+            <p>Aenean ultricies luctus massa non condimentum. Vestibulum tempor purus a dapibus ultrices.</p>
+            <h4>Mark Johnson</h4>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-container">
+          <div class="footer-column">
+            <h3>About Us</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc fringilla odio euismod, bibendum justo vitae, posuere massa.</p>
+          </div>
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <p>123 Fashion Street</p>
+            <p>City, State, ZIP</p>
+            <p>Email: info@example.com</p>
+            <p>Phone: 123-456-7890</p>
+          </div>
+          <div class="footer-column">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; NOVA. All rights reserved.</p>
+        </div>
+      </footer>
+      
+      
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script> 
+
+  <script src="script.js"></script>
+
+</body>
+</html>
